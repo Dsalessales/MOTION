@@ -1,0 +1,9 @@
+{
+  // Cloudflare Workers: publica o build do Vite (pasta dist) como site estático
+  "name": "motion",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  }
+}

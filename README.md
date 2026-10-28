@@ -18,9 +18,14 @@ Build de produção: `npm run build` (saída em `dist/`).
 
 ## Publicação
 
-O workflow `.github/workflows/deploy.yml` publica o site no GitHub Pages a
-cada push na `main`. Para ativar (uma vez só): **Settings → Pages → Source:
-GitHub Actions**. O site fica em https://dsalessales.github.io/MOTION/.
+O site roda no Cloudflare Workers (https://motion.douglas41299.workers.dev/),
+configurado em `wrangler.jsonc`. Com o Worker ligado a este repositório
+(Settings → Build → Git repository), cada push na `main` publica sozinho:
+
+- Build command: `npm run build`
+- Deploy command: `npx wrangler deploy`
+
+Para publicar à mão: `npm run build && npx wrangler deploy`.
 
 ## Estrutura
 
