@@ -1,0 +1,35 @@
+:root {
+  --bg: #0e0e0d;
+  --ink: #ece7df;
+  --muted: rgba(236, 231, 223, 0.56);
+  --line: rgba(236, 231, 223, 0.14);
+  --accent: #c8a46a;
+  --serif: 'Instrument Serif', 'Times New Roman', serif;
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+h1 {
+  margin: 0;
+}

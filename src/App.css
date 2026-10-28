@@ -1,0 +1,220 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  overflow: hidden;
+  background:
+    radial-gradient(60% 45% at 50% 58%, rgba(200, 164, 106, 0.07), transparent 70%),
+    var(--bg);
+}
+
+/* Barra superior */
+.hero__bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  padding: 22px clamp(16px, 4vw, 48px);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+.hero__brand {
+  font-family: var(--serif);
+  font-size: 22px;
+  letter-spacing: 0;
+}
+
+.hero__brand em,
+.hero__title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero__nav {
+  display: flex;
+  gap: 32px;
+}
+
+.hero__nav a,
+.hero__ticket {
+  color: var(--muted);
+  transition: color 200ms ease;
+}
+
+.hero__nav a:hover,
+.hero__ticket:hover {
+  color: var(--ink);
+}
+
+.hero__ticket {
+  justify-self: end;
+  padding: 9px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+/* Título */
+.hero__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: clamp(12px, 3vh, 36px) 16px 0;
+  text-align: center;
+  animation: hero-in 1100ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(200, 164, 106, 0.16);
+}
+
+.hero__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(52px, 9vw, 128px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+/* Carrossel */
+.hero__stage {
+  position: relative;
+  width: 100%;
+  height: clamp(380px, 60svh, 560px);
+  margin-top: clamp(-24px, -2vh, 0px);
+  color: var(--ink);
+  /* Esfuma as bordas onde a lente curva as obras para fora do palco */
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+}
+
+/* Rodapé do hero */
+.hero__foot {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: end;
+  gap: 24px;
+  margin-top: auto;
+  padding: 0 clamp(16px, 4vw, 48px) 28px;
+  font-size: 13px;
+}
+
+.hero__lede {
+  max-width: 34ch;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.hero__hint {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.hero__progress {
+  position: relative;
+  width: 96px;
+  height: 1px;
+  background: var(--line);
+}
+
+.hero__progress span {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  transform-origin: left;
+  transition: transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 500;
+  transition: background 200ms ease;
+}
+
+.hero__cta:hover {
+  background: #fff;
+}
+
+.hero__cta span {
+  transition: transform 200ms ease;
+}
+
+.hero__cta:hover span {
+  transform: translateX(3px);
+}
+
+.hero a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero__nav,
+  .hero__hint,
+  .hero__progress {
+    display: none;
+  }
+
+  .hero__bar {
+    grid-template-columns: 1fr auto;
+  }
+
+  .hero__foot {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__intro {
+    animation: none;
+  }
+}
