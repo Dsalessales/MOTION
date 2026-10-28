@@ -13,7 +13,7 @@ export default function App() {
     <main className="hero">
       <header className="hero__bar">
         <a className="hero__brand" href="#">
-          Galeria <em>Ápice</em>
+          MOTION
         </a>
         <nav className="hero__nav" aria-label="Principal">
           {NAV.map(item => (
@@ -28,12 +28,8 @@ export default function App() {
       </header>
 
       <section className="hero__intro">
-        <p className="hero__eyebrow">
-          <span className="hero__dot" aria-hidden="true" />
-          Em cartaz · 12 set — 20 dez 2026
-        </p>
         <h1 className="hero__title">
-          Matéria <em>&amp;</em> Forma
+          Arts <em>em cartaz</em>
         </h1>
       </section>
 

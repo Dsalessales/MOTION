@@ -1,4 +1,4 @@
-# Galeria Ápice — Hero
+# MOTION — Hero
 
 Tela hero de uma galeria de arte construída com React + Vite e o componente
 `FlexCarousel` (WebGL via [ogl](https://github.com/oframe/ogl)): uma lente
