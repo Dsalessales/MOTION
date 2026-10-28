@@ -129,6 +129,30 @@
   opacity: 0.7;
 }
 
+.hero__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero__credit {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero__credit strong {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--accent);
+}
+
 .hero__actions {
   display: flex;
   align-items: center;
@@ -205,7 +229,17 @@
   .hero__foot {
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 16px;
+    padding-bottom: 20px;
     text-align: center;
+  }
+
+  .hero__center {
+    order: 1;
+  }
+
+  .hero__stage {
+    height: clamp(340px, 54svh, 560px);
   }
 
   .hero__actions {

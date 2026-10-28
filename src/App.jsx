@@ -71,9 +71,14 @@ export default function App() {
           Onze obras entre escultura, fotografia e instalação investigam o que acontece quando o material deixa de
           obedecer à forma.
         </p>
-        <p className="hero__hint" aria-hidden="true">
-          Arraste, role ou use as setas · clique para ampliar
-        </p>
+        <div className="hero__center">
+          <p className="hero__hint" aria-hidden="true">
+            Arraste, role ou use as setas · clique para ampliar
+          </p>
+          <p className="hero__credit">
+            Feito por <strong>digi studio</strong>
+          </p>
+        </div>
         <div className="hero__actions">
           <span className="hero__progress" aria-hidden="true">
             <span style={{ transform: `scaleX(${(active + 1) / obras.length})` }} />
