@@ -16,6 +16,12 @@ npm run dev
 
 Build de produção: `npm run build` (saída em `dist/`).
 
+## Publicação
+
+O workflow `.github/workflows/deploy.yml` publica o site no GitHub Pages a
+cada push na `main`. Para ativar (uma vez só): **Settings → Pages → Source:
+GitHub Actions**. O site fica em https://dsalessales.github.io/MOTION/.
+
 ## Estrutura
 
 ```
